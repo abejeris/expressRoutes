@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "3f33c5a2-04ad-452b-8308-232c8b16060c",
-		"name": "express js testing",
+		"name": "expressPostmanCollection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "27350951"
 	},
@@ -16,7 +16,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"pavadinimas_ketvirtas\",\n    \"id\": 4,\n    \"body\": \"ketvirtas bodis\"\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -35,10 +35,48 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "all posts recieved",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/posts/?title=pirmas_pavadinimas",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "pirmas_pavadinimas"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
 		},
 		{
-			"name": "post with id recieved",
+			"name": "post by id recieved",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -47,7 +85,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"pavadinimas_ketvirtas\",\n    \"id\": 4,\n    \"body\": \"ketvirtas bodis\"\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -55,49 +93,19 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/2",
+					"raw": "localhost:3000/posts/:id",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"posts",
-						"2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "post with query params recieved Copy",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"pavadinimas_ketvirtas\",\n    \"id\": 4,\n    \"body\": \"ketvirtas bodis\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:3000/posts?title=pirmas_pavadinimas",
-					"host": [
-						"localhost"
+						":id"
 					],
-					"port": "3000",
-					"path": [
-						"posts"
-					],
-					"query": [
+					"variable": [
 						{
-							"key": "title",
-							"value": "pirmas_pavadinimas"
+							"key": "id",
+							"value": "1"
 						}
 					]
 				}
@@ -167,7 +175,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"pavadinimas_ketvirtas\",\n    \"id\": 4,\n    \"body\": \"ketvirtas bodis patvarkytas\"\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
